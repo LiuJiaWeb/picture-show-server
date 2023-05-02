@@ -23,9 +23,12 @@ export class TablePicture {
   @Column({ comment: '权重值(值越大则越优先展示)', unsigned: true, default: 0 })
   sort: number;
 
-  @CreateDateColumn({ comment: '创建时间', type: 'timestamp' })
-  create_time: Date;
+  @Column({ comment: '创建时间', unsigned: true, default: 0 })
+  create_time: number;
 
-  // @Column({ comment: '创建时间', type: 'datetime', default: () => 'CURRENT_TIMESTAMP' })
-  // create_time: string;
+  @Column({ comment: '更新时间', unsigned: true, default: 0 })
+  update_time: number;
+
+  @Column({ comment: '是否进行展示(值为0时不显示，相当于软删除)', unsigned: true, default: 1 })
+  is_display: number;
 }

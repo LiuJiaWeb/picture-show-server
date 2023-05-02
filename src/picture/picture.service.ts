@@ -2,25 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Like, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TablePicture } from 'src/tableEntity/table_picture.entity';
-
-/**
- * @description: 判断是否为JSON
- * @param {string} str
- */
-const isJSON = (str: string) => {
-  if (!str) return false;
-  if (typeof str === 'string') {
-    try {
-      const obj = JSON.parse(str);
-      if (typeof obj === 'object' && obj) return true;
-      return false;
-    } catch (e) {
-      return false;
-    }
-  }
-};
-
-const dataHandle = (o_data: object, method: string) => {};
+import { curTime, dataHandle } from 'src/utils/utils';
 
 @Injectable()
 export class PictureService {
@@ -31,16 +13,8 @@ export class PictureService {
    */
   async addPic(req: any) {
     let data: object = new TablePicture();
-    data = { ...data, ...req };
-
-    Object.keys(data).forEach((key) => {
-      data[key] = data?.[key] ?? '';
-      if (typeof data[key] === 'object') {
-        data[key] = JSON.stringify(data[key]);
-      }
-    });
-
-    // await this.sleep(3000);
+    data = { ...data, ...req, create_time: curTime() };
+    data = dataHandle(data, 'set');
     await this.table_picture.save(data);
     return {
       code: 200,
@@ -78,14 +52,10 @@ export class PictureService {
       imgs: imgs || [],
       thumb: thumb || '',
       sort: +sort || 0,
+      update_time: curTime(),
     };
 
-    Object.keys(data).forEach((key) => {
-      data[key] = data?.[key] ?? '';
-      if (typeof data[key] === 'object') {
-        data[key] = JSON.stringify(data[key]);
-      }
-    });
+    data = dataHandle(data, 'set');
 
     await this.table_picture.update(+pic_id, data);
 
@@ -100,55 +70,18 @@ export class PictureService {
    * @description: 获取图集列表
    */
   async getPicList() {
-    let result = await this.table_picture.find();
-    // console.log(result);
-
-    result.forEach((it) => {
-      Object.keys(it).forEach((key) => {
-        const flag = isJSON(it?.[key] || '');
-        flag && (it[key] = JSON.parse(it[key]));
-      });
-    });
-
-    // result = { ...(result?.[0] || {}) };
-    // Object.keys(result).forEach((key) => {
-    //   const flag = isJSON(result?.[key] || '');
-    //   flag && (result[key] = JSON.parse(result[key]));
-    // });
-
-    // console.log(result)
-
-    const res = {
-      code: 200,
-      data: result || [],
-      msg: 'ok',
-    };
-    return res;
+    let result = await this.table_picture.find({ where: { is_display: 1 } });
+    result = dataHandle(result);
+    return { code: 200, data: result || [], msg: 'ok' };
   }
 
   /**
    * @description: 获取图集详情
    */
   async getPicDetail(id: number) {
-    let result: object = await this.table_picture.find({
-      where: { pic_id: +id || 0 },
-    });
-
+    let result: object = await this.table_picture.find({ where: { pic_id: +id || 0, is_display: 1 } });
     result = { ...(result?.[0] || {}) };
-
-    Object.keys(result).forEach((key) => {
-      const flag = isJSON(result?.[key] || '');
-      flag && (result[key] = JSON.parse(result[key]));
-    });
-
-    return {
-      code: 200,
-      data: result,
-      msg: 'ok',
-    };
-  }
-
-  async sleep(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+    result = dataHandle(result);
+    return { code: 200, data: result || {}, msg: 'ok' };
   }
 }
