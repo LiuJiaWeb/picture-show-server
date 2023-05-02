@@ -78,4 +78,4 @@ const dataHandle = (o_data: any, method = 'get') => {
   return result;
 };
 
-export { curTime, sleep, dataHandle };
+export { curTime, dataHandle };

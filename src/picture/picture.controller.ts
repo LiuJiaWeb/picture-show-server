@@ -27,7 +27,6 @@ export class PictureController {
 
   @Get('pic-detail')
   getPicDetail(@Query() query): any {
-    const id: number = +query?.id || 0;
-    return this.pictureService.getPicDetail(id);
+    return this.pictureService.getPicDetail(query);
   }
 }

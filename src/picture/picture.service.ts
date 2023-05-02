@@ -3,6 +3,7 @@ import { Like, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TablePicture } from 'src/tableEntity/table_picture.entity';
 import { curTime, dataHandle } from 'src/utils/utils';
+import { ObjectId } from 'mongodb';
 
 @Injectable()
 export class PictureService {
@@ -14,7 +15,6 @@ export class PictureService {
   async addPic(req: any) {
     let data: object = new TablePicture();
     data = { ...data, ...req, create_time: curTime() };
-    data = dataHandle(data, 'set');
     await this.table_picture.save(data);
     return {
       code: 200,
@@ -28,8 +28,9 @@ export class PictureService {
    * @param {any} req
    */
   async delPic(req: any) {
-    const { id: pic_id } = req || {};
-    await this.table_picture.delete(+pic_id);
+    let _id: any = req?.id || '';
+    _id = new ObjectId(_id);
+    await this.table_picture.delete(_id);
     return {
       code: 200,
       data: {},
@@ -42,46 +43,41 @@ export class PictureService {
    * @param {any} req
    */
   async editPic(req: any) {
-    const { id: pic_id, title, desc, imgs, thumb, sort } = req || {};
-
-    let data: object = new TablePicture();
-    data = {
-      ...data,
-      title: title || '',
-      desc: desc || '',
-      imgs: imgs || [],
-      thumb: thumb || '',
-      sort: +sort || 0,
-      update_time: curTime(),
-    };
-
-    data = dataHandle(data, 'set');
-
-    await this.table_picture.update(+pic_id, data);
-
-    return {
-      code: 200,
-      data: {},
-      msg: 'edit success',
-    };
+    // const { id: pic_id, title, desc, imgs, thumb, sort } = req || {};
+    // let data: object = new TablePicture();
+    // data = {
+    //   ...data,
+    //   title: title || '',
+    //   desc: desc || '',
+    //   imgs: imgs || [],
+    //   thumb: thumb || '',
+    //   sort: +sort || 0,
+    //   update_time: curTime(),
+    // };
+    // data = dataHandle(data, 'set');
+    // await this.table_picture.update(+pic_id, data);
+    // return {
+    //   code: 200,
+    //   data: {},
+    //   msg: 'edit success',
+    // };
   }
 
   /**
    * @description: 获取图集列表
    */
   async getPicList() {
-    let result = await this.table_picture.find({ where: { is_display: 1 } });
-    result = dataHandle(result);
+    let result = await this.table_picture.find();
     return { code: 200, data: result || [], msg: 'ok' };
   }
 
   /**
    * @description: 获取图集详情
    */
-  async getPicDetail(id: number) {
-    let result: object = await this.table_picture.find({ where: { pic_id: +id || 0, is_display: 1 } });
-    result = { ...(result?.[0] || {}) };
-    result = dataHandle(result);
+  async getPicDetail(query: any) {
+    let _id: any = query?.id || '';
+    _id = new ObjectId(_id);
+    let result = await this.table_picture.findOne({ where: { _id } });
     return { code: 200, data: result || {}, msg: 'ok' };
   }
 }
