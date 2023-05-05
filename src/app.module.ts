@@ -12,6 +12,9 @@ const OrmConfig: object = {
   retryAttempts: 10, // 充实次数
   synchronize: true, // 是否将实体同步到数据库
   autoLoadEntities: true, // 自动加载实体配置，forFeature()注册的每个实体都自己动加载
+  cache: {
+    duration: 3 * 1000, // 缓存时间
+  },
 };
 
 @Module({
