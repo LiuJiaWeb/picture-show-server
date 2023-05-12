@@ -20,11 +20,11 @@ dependencies:
     specifier: ^6.7.0
     version: registry.npmmirror.com/express-rate-limit@6.7.0(express@4.18.2)
   mongodb:
-    specifier: ^5.4.0
-    version: registry.npmmirror.com/mongodb@5.4.0
+    specifier: ^5.5.0
+    version: registry.npmmirror.com/mongodb@5.5.0
   mysql2:
-    specifier: ^3.3.0
-    version: registry.npmmirror.com/mysql2@3.3.0
+    specifier: ^3.3.1
+    version: registry.npmmirror.com/mysql2@3.3.1
   reflect-metadata:
     specifier: ^0.1.13
     version: registry.npmmirror.com/reflect-metadata@0.1.13
@@ -33,7 +33,7 @@ dependencies:
     version: registry.npmmirror.com/rxjs@7.8.1
   typeorm:
     specifier: ^0.3.16
-    version: registry.npmmirror.com/typeorm@0.3.16(mongodb@5.4.0)(mysql2@3.3.0)(ts-node@10.9.1)
+    version: registry.npmmirror.com/typeorm@0.3.16(mongodb@5.5.0)(mysql2@3.3.1)(ts-node@10.9.1)
 
 devDependencies:
   '@nestjs/cli':
@@ -89,7 +89,7 @@ devDependencies:
     version: registry.npmmirror.com/ts-jest@29.0.5(@babel/core@7.21.8)(jest@29.5.0)(typescript@4.9.5)
   ts-loader:
     specifier: ^9.4.2
-    version: registry.npmmirror.com/ts-loader@9.4.2(typescript@4.9.5)(webpack@5.82.0)
+    version: registry.npmmirror.com/ts-loader@9.4.2(typescript@4.9.5)(webpack@5.82.1)
   ts-node:
     specifier: ^10.9.1
     version: registry.npmmirror.com/ts-node@10.9.1(@types/node@18.15.11)(typescript@4.9.5)
@@ -1227,7 +1227,7 @@ packages:
       '@nestjs/core': registry.npmmirror.com/@nestjs/core@9.4.0(@nestjs/common@9.4.0)(@nestjs/platform-express@9.4.0)(reflect-metadata@0.1.13)(rxjs@7.8.1)
       reflect-metadata: registry.npmmirror.com/reflect-metadata@0.1.13
       rxjs: registry.npmmirror.com/rxjs@7.8.1
-      typeorm: registry.npmmirror.com/typeorm@0.3.16(mongodb@5.4.0)(mysql2@3.3.0)(ts-node@10.9.1)
+      typeorm: registry.npmmirror.com/typeorm@0.3.16(mongodb@5.5.0)(mysql2@3.3.1)(ts-node@10.9.1)
       uuid: registry.npmmirror.com/uuid@8.3.2
     dev: false
 
@@ -1322,10 +1322,10 @@ packages:
     name: '@tsconfig/node14'
     version: 1.0.3
 
-  registry.npmmirror.com/@tsconfig/node16@1.0.3:
-    resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@tsconfig/node16/-/node16-1.0.3.tgz}
+  registry.npmmirror.com/@tsconfig/node16@1.0.4:
+    resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@tsconfig/node16/-/node16-1.0.4.tgz}
     name: '@tsconfig/node16'
-    version: 1.0.3
+    version: 1.0.4
 
   registry.npmmirror.com/@types/babel__core@7.20.0:
     resolution: {integrity: sha512-+n8dL/9GWblDO0iU6eZAwEIJVr5DWigtle+Q6HLOrh/pdbXOhOtqzq8VPPE2zvNJzSKY4vH/z3iT3tn0A3ypiQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/babel__core/-/babel__core-7.20.0.tgz}
@@ -2289,7 +2289,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: registry.npmmirror.com/caniuse-lite@1.0.30001486
-      electron-to-chromium: registry.npmmirror.com/electron-to-chromium@1.4.388
+      electron-to-chromium: registry.npmmirror.com/electron-to-chromium@1.4.392
       node-releases: registry.npmmirror.com/node-releases@2.0.10
       update-browserslist-db: registry.npmmirror.com/update-browserslist-db@1.0.11(browserslist@4.21.5)
     dev: true
@@ -2311,10 +2311,10 @@ packages:
       node-int64: registry.npmmirror.com/node-int64@0.4.0
     dev: true
 
-  registry.npmmirror.com/bson@5.2.0:
-    resolution: {integrity: sha512-HevkSpDbpUfsrHWmWiAsNavANKYIErV2ePXllp1bwq5CDreAaFVj6RVlZpJnxK4WWDCJ/5jMUpaY6G526q3Hjg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/bson/-/bson-5.2.0.tgz}
+  registry.npmmirror.com/bson@5.3.0:
+    resolution: {integrity: sha512-ukmCZMneMlaC5ebPHXIkP8YJzNl5DC41N5MAIvKDqLggdao342t4McltoJBQfQya/nHBWAcSsYRqlXPoQkTJag==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/bson/-/bson-5.3.0.tgz}
     name: bson
-    version: 5.2.0
+    version: 5.3.0
     engines: {node: '>=14.20.1'}
     dev: false
 
@@ -2858,10 +2858,10 @@ packages:
     name: ee-first
     version: 1.1.1
 
-  registry.npmmirror.com/electron-to-chromium@1.4.388:
-    resolution: {integrity: sha512-xZ0y4zjWZgp65okzwwt00f2rYibkFPHUv9qBz+Vzn8cB9UXIo9Zc6Dw81LJYhhNt0G/vR1OJEfStZ49NKl0YxQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.388.tgz}
+  registry.npmmirror.com/electron-to-chromium@1.4.392:
+    resolution: {integrity: sha512-TXQOMW9tnhIms3jGy/lJctLjICOgyueZFJ1KUtm6DTQ+QpxX3p7ZBwB6syuZ9KBuT5S4XX7bgY1ECPgfxKUdOg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.392.tgz}
     name: electron-to-chromium
-    version: 1.4.388
+    version: 1.4.392
     dev: true
 
   registry.npmmirror.com/emittery@0.13.1:
@@ -3590,7 +3590,7 @@ packages:
       fs.realpath: registry.npmmirror.com/fs.realpath@1.0.0
       minimatch: registry.npmmirror.com/minimatch@8.0.4
       minipass: registry.npmmirror.com/minipass@4.2.8
-      path-scurry: registry.npmmirror.com/path-scurry@1.7.0
+      path-scurry: registry.npmmirror.com/path-scurry@1.8.0
     dev: true
 
   registry.npmmirror.com/globals@11.12.0:
@@ -4899,10 +4899,10 @@ packages:
       whatwg-url: registry.npmmirror.com/whatwg-url@11.0.0
     dev: false
 
-  registry.npmmirror.com/mongodb@5.4.0:
-    resolution: {integrity: sha512-6GDKgO7WiYUw+ILap143VXfAou06hjxDGgYUZWGnI4hgoZfP3el0G3l69JqJF8SEQbZmC+SN/2a0aWI/aWJoxA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mongodb/-/mongodb-5.4.0.tgz}
+  registry.npmmirror.com/mongodb@5.5.0:
+    resolution: {integrity: sha512-XgrkUgAAdfnZKQfk5AsYL8j7O99WHd4YXPxYxnh8dZxD+ekYWFRA3JktUsBnfg+455Smf75/+asoU/YLwNGoQQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mongodb/-/mongodb-5.5.0.tgz}
     name: mongodb
-    version: 5.4.0
+    version: 5.5.0
     engines: {node: '>=14.20.1'}
     peerDependencies:
       '@aws-sdk/credential-providers': ^3.201.0
@@ -4916,7 +4916,7 @@ packages:
       snappy:
         optional: true
     dependencies:
-      bson: registry.npmmirror.com/bson@5.2.0
+      bson: registry.npmmirror.com/bson@5.3.0
       mongodb-connection-string-url: registry.npmmirror.com/mongodb-connection-string-url@2.6.0
       socks: registry.npmmirror.com/socks@2.7.1
     optionalDependencies:
@@ -4958,10 +4958,10 @@ packages:
     version: 0.0.8
     dev: true
 
-  registry.npmmirror.com/mysql2@3.3.0:
-    resolution: {integrity: sha512-/+LGlWgXxppcomT1NqkUnaDchcS9tebsXsj5eZQhnAB/onlSLgqMA5W9ZRHcZPKyqg3XROJDgomB4eCkn6Ca2g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mysql2/-/mysql2-3.3.0.tgz}
+  registry.npmmirror.com/mysql2@3.3.1:
+    resolution: {integrity: sha512-UD84/AvLwO5qmSABEsBTZ7y7JKv3sM8JzWGhuL4tDkJwVsClVVAcelNSR5Unyhxj6/KHBAkjS7qe5/c+gEmNvA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mysql2/-/mysql2-3.3.1.tgz}
     name: mysql2
-    version: 3.3.0
+    version: 3.3.1
     engines: {node: '>= 8.0'}
     dependencies:
       denque: registry.npmmirror.com/denque@2.1.0
@@ -5272,10 +5272,10 @@ packages:
     version: 1.0.7
     dev: true
 
-  registry.npmmirror.com/path-scurry@1.7.0:
-    resolution: {integrity: sha512-UkZUeDjczjYRE495+9thsgcVgsaCPkaw80slmfVFgllxY+IO8ubTsOpFVjDPROBqJdHfVPUFRHPBV/WciOVfWg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/path-scurry/-/path-scurry-1.7.0.tgz}
+  registry.npmmirror.com/path-scurry@1.8.0:
+    resolution: {integrity: sha512-IjTrKseM404/UAWA8bBbL3Qp6O2wXkanuIE3seCxBH7ctRuvH1QRawy1N3nVDHGkdeZsjOsSe/8AQBL/VQCy2g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/path-scurry/-/path-scurry-1.8.0.tgz}
     name: path-scurry
-    version: 1.7.0
+    version: 1.8.0
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       lru-cache: registry.npmmirror.com/lru-cache@9.1.1
@@ -6097,7 +6097,7 @@ packages:
       webpack: registry.npmmirror.com/webpack@5.80.0
     dev: true
 
-  registry.npmmirror.com/terser-webpack-plugin@5.3.8(webpack@5.82.0):
+  registry.npmmirror.com/terser-webpack-plugin@5.3.8(webpack@5.82.1):
     resolution: {integrity: sha512-WiHL3ElchZMsK27P8uIUh4604IgJyAW47LVXGbEoB21DbQcZ+OuMpGjVYnEUaqcWM6dO8uS2qUbA7LSCWqvsbg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/terser-webpack-plugin/-/terser-webpack-plugin-5.3.8.tgz}
     id: registry.npmmirror.com/terser-webpack-plugin/5.3.8
     name: terser-webpack-plugin
@@ -6121,7 +6121,7 @@ packages:
       schema-utils: registry.npmmirror.com/schema-utils@3.1.2
       serialize-javascript: registry.npmmirror.com/serialize-javascript@6.0.1
       terser: registry.npmmirror.com/terser@5.17.3
-      webpack: registry.npmmirror.com/webpack@5.82.0
+      webpack: registry.npmmirror.com/webpack@5.82.1
     dev: true
 
   registry.npmmirror.com/terser@5.17.3:
@@ -6272,7 +6272,7 @@ packages:
       yargs-parser: registry.npmmirror.com/yargs-parser@21.1.1
     dev: true
 
-  registry.npmmirror.com/ts-loader@9.4.2(typescript@4.9.5)(webpack@5.82.0):
+  registry.npmmirror.com/ts-loader@9.4.2(typescript@4.9.5)(webpack@5.82.1):
     resolution: {integrity: sha512-OmlC4WVmFv5I0PpaxYb+qGeGOdm5giHU7HwDDUjw59emP2UYMHy9fFSDcYgSNoH8sXcj4hGCSEhlDZ9ULeDraA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ts-loader/-/ts-loader-9.4.2.tgz}
     id: registry.npmmirror.com/ts-loader/9.4.2
     name: ts-loader
@@ -6287,7 +6287,7 @@ packages:
       micromatch: registry.npmmirror.com/micromatch@4.0.5
       semver: registry.npmmirror.com/semver@7.5.0
       typescript: registry.npmmirror.com/typescript@4.9.5
-      webpack: registry.npmmirror.com/webpack@5.82.0
+      webpack: registry.npmmirror.com/webpack@5.82.1
     dev: true
 
   registry.npmmirror.com/ts-node@10.9.1(@types/node@18.15.11)(typescript@4.9.5):
@@ -6311,7 +6311,7 @@ packages:
       '@tsconfig/node10': registry.npmmirror.com/@tsconfig/node10@1.0.9
       '@tsconfig/node12': registry.npmmirror.com/@tsconfig/node12@1.0.11
       '@tsconfig/node14': registry.npmmirror.com/@tsconfig/node14@1.0.3
-      '@tsconfig/node16': registry.npmmirror.com/@tsconfig/node16@1.0.3
+      '@tsconfig/node16': registry.npmmirror.com/@tsconfig/node16@1.0.4
       '@types/node': registry.npmmirror.com/@types/node@18.15.11
       acorn: registry.npmmirror.com/acorn@8.8.2
       acorn-walk: registry.npmmirror.com/acorn-walk@8.2.0
@@ -6413,7 +6413,7 @@ packages:
     name: typedarray
     version: 0.0.6
 
-  registry.npmmirror.com/typeorm@0.3.16(mongodb@5.4.0)(mysql2@3.3.0)(ts-node@10.9.1):
+  registry.npmmirror.com/typeorm@0.3.16(mongodb@5.5.0)(mysql2@3.3.1)(ts-node@10.9.1):
     resolution: {integrity: sha512-wJ4Qy1oqRKNDdZiBTTaVMqwo/XxC52Q7uNPTjltPgLhvIW173bL6Iad0lhptMOsFlpixFPaUu3PNziaRBwX2Zw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/typeorm/-/typeorm-0.3.16.tgz}
     id: registry.npmmirror.com/typeorm/0.3.16
     name: typeorm
@@ -6484,8 +6484,8 @@ packages:
       dotenv: registry.npmmirror.com/dotenv@16.0.3
       glob: registry.npmmirror.com/glob@8.1.0
       mkdirp: registry.npmmirror.com/mkdirp@2.1.6
-      mongodb: registry.npmmirror.com/mongodb@5.4.0
-      mysql2: registry.npmmirror.com/mysql2@3.3.0
+      mongodb: registry.npmmirror.com/mongodb@5.5.0
+      mysql2: registry.npmmirror.com/mysql2@3.3.1
       reflect-metadata: registry.npmmirror.com/reflect-metadata@0.1.13
       sha.js: registry.npmmirror.com/sha.js@2.4.11
       ts-node: registry.npmmirror.com/ts-node@10.9.1(@types/node@18.15.11)(typescript@4.9.5)
@@ -6687,10 +6687,10 @@ packages:
       - uglify-js
     dev: true
 
-  registry.npmmirror.com/webpack@5.82.0:
-    resolution: {integrity: sha512-iGNA2fHhnDcV1bONdUu554eZx+XeldsaeQ8T67H6KKHl2nUSwX8Zm7cmzOA46ox/X1ARxf7Bjv8wQ/HsB5fxBg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/webpack/-/webpack-5.82.0.tgz}
+  registry.npmmirror.com/webpack@5.82.1:
+    resolution: {integrity: sha512-C6uiGQJ+Gt4RyHXXYt+v9f+SN1v83x68URwgxNQ98cvH8kxiuywWGP4XeNZ1paOzZ63aY3cTciCEQJNFUljlLw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/webpack/-/webpack-5.82.1.tgz}
     name: webpack
-    version: 5.82.0
+    version: 5.82.1
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -6720,7 +6720,7 @@ packages:
       neo-async: registry.npmmirror.com/neo-async@2.6.2
       schema-utils: registry.npmmirror.com/schema-utils@3.1.2
       tapable: registry.npmmirror.com/tapable@2.2.1
-      terser-webpack-plugin: registry.npmmirror.com/terser-webpack-plugin@5.3.8(webpack@5.82.0)
+      terser-webpack-plugin: registry.npmmirror.com/terser-webpack-plugin@5.3.8(webpack@5.82.1)
       watchpack: registry.npmmirror.com/watchpack@2.4.0
       webpack-sources: registry.npmmirror.com/webpack-sources@3.2.3
     transitivePeerDependencies:

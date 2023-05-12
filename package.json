@@ -26,8 +26,8 @@
     "@nestjs/typeorm": "^9.0.1",
     "@stdlib/assert-is-json": "^0.0.8",
     "express-rate-limit": "^6.7.0",
-    "mongodb": "^5.4.0",
-    "mysql2": "^3.3.0",
+    "mongodb": "^5.5.0",
+    "mysql2": "^3.3.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
     "typeorm": "^0.3.16"
